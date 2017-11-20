@@ -35,7 +35,7 @@ class Spider():
     def __sort_seed(self,anchors):
         r = re.findall('\d*',anchors['number'][0])
         number = float(r[0])
-        if '万' in anchors['number']:
+        if '万' in anchors['number'][0]:
             number = number * 10000
         return number
 
@@ -51,5 +51,4 @@ class Spider():
         self.__show(anlnew)
 
 
-spi = Spider()
-spi.getCont()
+
